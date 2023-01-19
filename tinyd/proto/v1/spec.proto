@@ -105,26 +105,61 @@ service UrlShortener {
 
 message CreateShortUrlRequest {
   string target_url = 1
-  [(google.api.field_behavior) = REQUIRED];
+  [
+    (google.api.field_behavior) = REQUIRED,
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "The target URL of the short key.",
+    }
+  ];
   string preferred_short_key = 2
-  [(google.api.field_behavior) = OPTIONAL];
+  [
+    (google.api.field_behavior) = OPTIONAL,
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "An optional preferred short key that will be used to generate the short URL.",
+    }
+  ];
 }
 
 message CreateShortUrlResponse {
   string target_url = 1
-  [(google.api.field_behavior) = REQUIRED];
+  [
+    (google.api.field_behavior) = REQUIRED,
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "The target URL."
+    }
+  ];
   string short_key = 2
-  [(google.api.field_behavior) = REQUIRED];
+  [
+    (google.api.field_behavior) = REQUIRED,
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "The short key for the target URL."
+    }
+  ];
   string host = 3
-  [(google.api.field_behavior) = REQUIRED];
+  [
+    (google.api.field_behavior) = REQUIRED,
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "The domain name for the short URL."
+    }
+  ];
 }
 
 message GetTargetUrlRequest {
   string short_key = 1
-  [(google.api.field_behavior) = REQUIRED];
+  [
+    (google.api.field_behavior) = REQUIRED,
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "Short key identifier for the target URL.",
+    }
+  ];
 }
 
 message GetTargetUrlResponse {
   string target_url = 1
-  [(google.api.field_behavior) = REQUIRED];
+  [
+    (google.api.field_behavior) = REQUIRED,
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "The target URL.",
+    }
+  ];
 }
