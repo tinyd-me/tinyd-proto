@@ -1,0 +1,28 @@
+proto_outdir = "./third_party"
+
+[[dependencies]]
+  target = "github.com/googleapis/googleapis/google"
+  subgroup = ""
+  revision = "62915a3b1f67b7fd342f9a58052a68f3a1cbb1de"
+  branch = "master"
+  path = "googleapis/google"
+  includes = ["api/annotations.proto", "api/field_behavior.proto", "api/http.proto", "rpc/code.proto", "rpc/error_details.proto", "rpc/status.proto"]
+  protocol = ""
+
+[[dependencies]]
+  target = "github.com/protocolbuffers/protobuf/src/google/protobuf"
+  subgroup = ""
+  revision = "f0dc78d7e6e331b8c6bb2d5283e06aa26883ca7c"
+  branch = ""
+  path = "protobuf/google/protobuf"
+  includes = ["field_mask.proto", "empty.proto"]
+  protocol = ""
+
+[[dependencies]]
+  target = "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-openapiv2/options"
+  subgroup = ""
+  revision = "4f8ee0904ad515e35a50c9d1ccfcb440fa5da95f"
+  branch = ""
+  path = "grpc-gateway/protoc-gen-openapiv2/options"
+  includes = ["annotations.proto", "openapiv2.proto"]
+  protocol = ""
